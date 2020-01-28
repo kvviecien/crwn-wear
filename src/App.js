@@ -1,8 +1,14 @@
 import React from 'react';
 import './App.css';
 
+import Homepage from './homepage';
+
 function App() {
-    return <div>crwn wear</div>;
+    return (
+        <div>
+            <Homepage />
+        </div>
+    );
 }
 
 export default App;
