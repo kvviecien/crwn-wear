@@ -32,12 +32,14 @@ class ContainerMenu extends React.Component {
                     title: 'womens',
                     imageUrl:
                         'https://images.unsplash.com/photo-1508350552147-213c11fcede6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
+                    size: 'large',
                     id: 4
                 },
                 {
                     title: 'mens',
                     imageUrl:
                         'https://images.unsplash.com/photo-1519631128182-433895475ffe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
+                    size: 'large',
                     id: 5
                 }
             ]
@@ -47,8 +49,13 @@ class ContainerMenu extends React.Component {
     render() {
         return (
             <div className="container-menu">
-                {this.state.sections.map(({ title, imageUrl, id }) => (
-                    <MenuItem key={id} title={title} imageUrl={imageUrl} />
+                {this.state.sections.map(({ title, imageUrl, id, size }) => (
+                    <MenuItem
+                        key={id}
+                        title={title}
+                        imageUrl={imageUrl}
+                        size={size}
+                    />
                 ))}
             </div>
         );
